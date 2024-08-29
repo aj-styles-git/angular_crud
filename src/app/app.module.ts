@@ -3,17 +3,24 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LayoutModule } from './layout/layout.module';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { UsersModule } from './users/users.module';
+import { ChessBoardComponent } from './chess-board/chess-board.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ChessBoardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MatSidenavModule,
+    LayoutModule,
     BrowserAnimationsModule,
-    MatSidenavModule
+    UsersModule
   ],
   providers: [],
   bootstrap: [AppComponent]
